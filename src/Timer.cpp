@@ -78,7 +78,7 @@ namespace NAF {
     }
 
     unsigned long Timer::getValue() {
-        if (( millis() - _waypoint) >= 0) {
+        if ((uint32_t)( millis() - _waypoint) >= 0) {
             return millis() - _waypoint;
         }
         return _timeout;
